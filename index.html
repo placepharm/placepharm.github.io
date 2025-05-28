@@ -11,18 +11,18 @@
       font-family: 'Noto Sans KR', sans-serif;
     }
     .section-title {
-      @apply text-3xl font-bold text-green-700 mb-8 text-center;
+      @apply text-3xl font-bold text-green-700 mb-12 text-center tracking-wide;
     }
     .card {
-      @apply bg-white rounded-xl shadow-lg overflow-hidden p-6 transition-all duration-300 hover:shadow-2xl;
+      @apply bg-white rounded-xl shadow-lg overflow-hidden p-6 transition-all duration-300 hover:shadow-2xl space-y-2;
     }
   </style>
 </head>
 <body class="bg-gray-50">
   <header class="sticky top-0 bg-white shadow z-50">
     <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
-      <div class="text-2xl font-bold text-green-600">🍀 PLACEPHARM CLEAN</div>
-      <nav class="space-x-4 hidden md:flex">
+      <div class="text-2xl font-extrabold text-green-600 tracking-tight">🍀 PLACEPHARM CLEAN</div>
+      <nav class="space-x-6 hidden md:flex text-sm font-medium">
         <a href="#about" class="text-gray-700 hover:text-green-700">브랜드 개요</a>
         <a href="#services" class="text-gray-700 hover:text-green-700">서비스</a>
         <a href="#strategy" class="text-gray-700 hover:text-green-700">차별화 전략</a>
@@ -36,77 +36,77 @@
   <section class="relative bg-green-100 py-24 text-center">
     <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('https://placehold.co/1920x800/A3E635/1F2937?text=PLACEPHARM+CLEAN');"></div>
     <div class="relative z-10 max-w-3xl mx-auto">
-      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
-        <span class="block text-green-700">공간의 약 <span class="text-2xl text-gray-700">(Place + Pharm)</span></span>
-        <span class="block text-gray-800 mt-2">사람과 지구를 위한 친환경 건물위생관리 솔루션</span>
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
+        <span class="block text-green-700">공간의 약 <span class="text-2xl text-gray-700 font-medium">(Place + Pharm)</span></span>
+        <span class="block text-gray-800 mt-2 font-semibold">사람과 지구를 위한 친환경 건물위생관리 솔루션</span>
       </h1>
-      <p class="mt-6 text-lg text-gray-700">플레이스팜 클린은 청소, 소독, 방역, 공기질 개선 등 위생 전반에 걸쳐 친환경 기술과 지속가능성을 실현하는 전문 건물위생관리 클린 솔루션 브랜드입니다.</p>
-      <a href="#services" class="inline-block mt-8 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">서비스 둘러보기</a>
+      <p class="mt-6 text-lg text-gray-700 leading-relaxed font-normal">플레이스팜 클린은 청소, 소독, 방역, 공기질 개선 등 위생 전반에 걸쳐<br class="hidden md:block"> 친환경 기술과 지속가능성을 실현하는 전문 건물위생관리 클린 솔루션 브랜드입니다.</p>
+      <a href="#services" class="inline-block mt-10 bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 text-base font-semibold transition">🚀 서비스 둘러보기</a>
     </div>
   </section>
 
-  <main class="max-w-7xl mx-auto px-4 py-16 space-y-20">
+  <main class="max-w-7xl mx-auto px-4 py-20 space-y-28">
     <section id="about">
-      <h2 class="section-title">1. 브랜드 개요</h2>
-      <div class="grid md:grid-cols-2 gap-8">
+      <h2 class="section-title">📌 1. 브랜드 개요</h2>
+      <div class="grid md:grid-cols-2 gap-10">
         <div class="card">
-          <h3 class="text-2xl font-semibold text-green-600 mb-2">1.1 브랜드 철학</h3>
-          <p>플레이스팜 클린은 ‘공간에 약을 처방하듯’ 건강하고 지속가능한 위생 솔루션을 제공합니다.</p>
-          <ul class="mt-4 list-disc list-inside text-green-700">
+          <h3 class="text-xl font-bold text-green-600 mb-2">🧬 브랜드 철학</h3>
+          <p class="text-gray-700">플레이스팜 클린은 ‘공간에 약을 처방하듯’<br>건강하고 지속가능한 위생 솔루션을 제공합니다.</p>
+          <ul class="mt-4 list-disc list-inside text-green-700 space-y-1">
             <li>사람에게 안전하고</li>
             <li>지구에 해가 없으며</li>
             <li>지속가능한 환경 관리 실천</li>
           </ul>
         </div>
         <div class="card">
-          <h3 class="text-2xl font-semibold text-green-600 mb-2">1.2 미션 & 비전</h3>
-          <p><strong>MISSION:</strong> 건강과 지구를 위한 친환경 위생관리 실현</p>
-          <p class="mt-2"><strong>VISION:</strong> 대한민국 대표 에코-위생 솔루션 기업으로 성장</p>
+          <h3 class="text-xl font-bold text-green-600 mb-2">🎯 미션 & 비전</h3>
+          <p><strong class="text-green-700">MISSION:</strong> 건강과 지구를 위한 친환경 위생관리 실현</p>
+          <p class="mt-2"><strong class="text-green-700">VISION:</strong> 대한민국 대표 에코-위생 솔루션 기업으로 성장</p>
         </div>
       </div>
     </section>
 
     <section id="services">
-      <h2 class="section-title">2. 서비스 구성</h2>
-      <div class="grid md:grid-cols-2 gap-8">
+      <h2 class="section-title">🛠️ 2. 서비스 구성</h2>
+      <div class="grid md:grid-cols-2 gap-10">
         <div class="card">
-          <h3 class="text-xl font-semibold text-green-600 mb-2">에코 클린</h3>
-          <p>바닥·유리 청소, 고온스팀 세척 / 생분해성 세정제, 물 절감 기술</p>
+          <h3 class="text-lg font-semibold text-green-600">♻️ 에코 클린</h3>
+          <p class="text-gray-700">바닥·유리 청소, 고온스팀 세척 / 생분해성 세정제, 물 절감 기술</p>
         </div>
         <div class="card">
-          <h3 class="text-xl font-semibold text-green-600 mb-2">소독 & 방역</h3>
-          <p>UV, 오존, 무독성 살균제 / 천연 성분 활용</p>
+          <h3 class="text-lg font-semibold text-green-600">🛡️ 소독 & 방역</h3>
+          <p class="text-gray-700">UV, 오존, 무독성 살균제 / 천연 성분 활용</p>
         </div>
         <div class="card">
-          <h3 class="text-xl font-semibold text-green-600 mb-2">공기질 개선</h3>
-          <p>새집증후군 제거, VOC 정화 / 활성탄 및 친환경 정화제 사용</p>
+          <h3 class="text-lg font-semibold text-green-600">🌿 공기질 개선</h3>
+          <p class="text-gray-700">새집증후군 제거, VOC 정화 / 활성탄 및 친환경 정화제 사용</p>
         </div>
         <div class="card">
-          <h3 class="text-xl font-semibold text-green-600 mb-2">친환경 컨설팅</h3>
-          <p>건물위생 평가 및 인증 대응, 탄소 저감 컨설팅</p>
+          <h3 class="text-lg font-semibold text-green-600">📋 친환경 컨설팅</h3>
+          <p class="text-gray-700">건물위생 평가 및 인증 대응, 탄소 저감 컨설팅</p>
         </div>
       </div>
     </section>
 
     <section id="strategy">
-      <h2 class="section-title">3. 차별화 전략</h2>
+      <h2 class="section-title">🚀 3. 차별화 전략</h2>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="card">
-          <h3 class="text-lg font-semibold text-green-600 mb-2">기술과 친환경 융합</h3>
-          <ul class="list-disc list-inside text-gray-700 text-sm">
+          <h3 class="text-base font-bold text-green-600 mb-2">🔧 기술과 친환경 융합</h3>
+          <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
             <li>천연성분 살균제 및 첨단 장비 활용</li>
             <li>친환경 인증 마크 대응</li>
           </ul>
         </div>
         <div class="card">
-          <h3 class="text-lg font-semibold text-green-600 mb-2">폐기물 저감 시스템</h3>
-          <ul class="list-disc list-inside text-gray-700 text-sm">
+          <h3 class="text-base font-bold text-green-600 mb-2">♻️ 폐기물 저감 시스템</h3>
+          <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
             <li>재사용 가능 도구 및 생분해 제품 사용</li>
           </ul>
         </div>
         <div class="card">
-          <h3 class="text-lg font-semibold text-green-600 mb-2">소비자 신뢰 확보</h3>
-          <ul class="list-disc list-inside text-gray-700 text-sm">
+          <h3 class="text-base font-bold text-green-600 mb-2">👥 소비자 신뢰 확보</h3>
+          <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
             <li>비교 이미지 제공</li>
             <li>위생관리 리포트 제공</li>
           </ul>
@@ -115,60 +115,57 @@
     </section>
 
     <section id="target">
-      <h2 class="section-title">4. 타깃 고객</h2>
+      <h2 class="section-title">🎯 4. 타깃 고객</h2>
       <div class="grid md:grid-cols-4 gap-6 text-center">
         <div class="card">
-          <div class="text-3xl">🏢</div>
-          <p class="font-semibold mt-2">공공기관</p>
+          <div class="text-3xl mb-1">🏢</div>
+          <p class="font-semibold">공공기관</p>
         </div>
         <div class="card">
-          <div class="text-3xl">🏥</div>
-          <p class="font-semibold mt-2">의료·요양시설</p>
+          <div class="text-3xl mb-1">🏥</div>
+          <p class="font-semibold">의료·요양시설</p>
         </div>
         <div class="card">
-          <div class="text-3xl">🏫</div>
-          <p class="font-semibold mt-2">교육기관</p>
+          <div class="text-3xl mb-1">🏫</div>
+          <p class="font-semibold">교육기관</p>
         </div>
         <div class="card">
-          <div class="text-3xl">🏬</div>
-          <p class="font-semibold mt-2">소상공인</p>
+          <div class="text-3xl mb-1">🏬</div>
+          <p class="font-semibold">소상공인</p>
         </div>
       </div>
     </section>
 
     <section id="growth">
-      <h2 class="section-title">5. 성장 전략</h2>
+      <h2 class="section-title">📈 5. 성장 전략</h2>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="card">
-          <h3 class="font-semibold text-green-700">단기</h3>
-          <p class="text-sm">지자체 및 민간 클린 서비스 확대</p>
+          <h3 class="font-bold text-green-700">📍 단기</h3>
+          <p class="text-sm text-gray-700">지자체 및 민간 클린 서비스 확대</p>
         </div>
         <div class="card">
-          <h3 class="font-semibold text-green-700">중기</h3>
-          <p class="text-sm">플랫폼 연계 / 지속가능위생관리 SaaS 출시</p>
+          <h3 class="font-bold text-green-700">⏳ 중기</h3>
+          <p class="text-sm text-gray-700">플랫폼 연계 / 지속가능위생관리 SaaS 출시</p>
         </div>
         <div class="card">
-          <h3 class="font-semibold text-green-700">장기</h3>
-          <p class="text-sm">글로벌 진출 및 스마트 빌딩 위생관리 플랫폼화</p>
+          <h3 class="font-bold text-green-700">🌏 장기</h3>
+          <p class="text-sm text-gray-700">글로벌 진출 및 스마트 빌딩 위생관리 플랫폼화</p>
         </div>
       </div>
     </section>
 
     <section id="contact">
-      <h2 class="section-title">6. 문의하기</h2>
-      <div class="card text-center max-w-xl mx-auto">
-        <p class="mb-4">위생 솔루션 상담 및 제휴 문의는 아래 연락처로 부탁드립니다.</p>
-        <p class="font-semibold"><a href="mailto:contact@placepharmclean.com" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors">
-                    이메일 📧 yes2plasma@gmail.com 문의하기
-                </a></p>
-
-        <p class="mt-1">📞 070-4046-2410</p>
+      <h2 class="section-title">📬 6. 문의하기</h2>
+      <div class="card text-center max-w-xl mx-auto space-y-2">
+        <p class="text-gray-700">위생 솔루션 상담 및 제휴 문의는 아래 연락처로 부탁드립니다.</p>
+        <a href="mailto:contact@placepharmclean.com" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg text-base transition">📧 이메일 문의하기</a>
+        <p class="text-lg font-medium text-gray-800">📞 070-4046-2410</p>
       </div>
     </section>
   </main>
 
   <footer class="bg-gray-800 text-white py-6 text-center">
-    <p>&copy; <span id="currentYear"></span> PLACEPHARM CLEAN. All rights reserved.</p>
+    <p class="font-medium">&copy; <span id="currentYear"></span> PLACEPHARM CLEAN. All rights reserved.</p>
     <p class="text-sm text-gray-400 mt-1">지속가능한 위생관리 솔루션으로 건강한 공간을 만듭니다.</p>
   </footer>
 
