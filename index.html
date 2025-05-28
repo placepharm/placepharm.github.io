@@ -1,10 +1,496 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-    <title>placepharm</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플레이스팜 클린 - 친환경 위생관리 솔루션</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', 'Inter', sans-serif;
+        }
+        /* 사용자 정의 스타일 */
+        .hero-bg {
+            background-image: url('https://placehold.co/1920x800/A3E635/1F2937?text=PLACEPHARM+CLEAN'); /* 실제 이미지로 교체하세요 */
+            background-size: cover;
+            background-position: center;
+        }
+        .section-title {
+            @apply text-3xl font-bold text-green-700 mb-8 text-center;
+        }
+        .card {
+            @apply bg-white rounded-xl shadow-lg overflow-hidden p-6 transition-all duration-300 hover:shadow-2xl;
+        }
+        .nav-link {
+            @apply px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-green-100 hover:text-green-700 transition-colors;
+        }
+        .sticky-nav {
+            @apply fixed top-0 left-0 right-0 z-50 bg-white shadow-md;
+        }
+        .table-responsive {
+            @apply overflow-x-auto;
+        }
+        .table-responsive table {
+            @apply min-w-full;
+        }
+        .table-responsive th, .table-responsive td {
+            @apply px-4 py-2 border border-gray-200;
+        }
+        .table-responsive th {
+            @apply bg-green-50 text-left text-sm font-medium text-green-700;
+        }
+        .table-responsive td {
+            @apply text-sm text-gray-700;
+        }
+        .tab-button {
+            @apply px-4 py-2 font-medium text-sm rounded-t-lg transition-colors duration-300;
+        }
+        .tab-button.active {
+            @apply bg-green-600 text-white;
+        }
+        .tab-button:not(.active) {
+            @apply bg-gray-200 hover:bg-gray-300 text-gray-700;
+        }
+        .tab-content {
+            @apply p-6 bg-white rounded-b-lg rounded-tr-lg shadow;
+        }
+    </style>
 </head>
-<body>
-    <h1>안녕하세요! placepharm 홈페이지에 오신 것을 환영합니다.</h1>
-    <p>placepharm 홈페이지를 준비하고 있습니다. 🎨</p>
+<body class="bg-gray-50">
+
+    <header id="navbar" class="bg-white shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-green-600">🍀 PLACEPHARM CLEAN</a>
+                </div>
+                <div class="hidden md:block">
+                    <nav class="ml-10 flex items-baseline space-x-4">
+                        <a href="#about" class="nav-link">브랜드 개요</a>
+                        <a href="#services" class="nav-link">서비스</a>
+                        <a href="#strategy" class="nav-link">차별화 전략</a>
+                        <a href="#target" class="nav-link">타깃 고객</a>
+                        <a href="#growth" class="nav-link">성장 전략</a>
+                        <a href="#contact" class="nav-link">문의</a>
+                    </nav>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-green-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500">
+                        <span class="sr-only">메뉴 열기</span>
+                        <svg class="h-6 w-6" id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                        <svg class="h-6 w-6 hidden" id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block nav-link text-base">브랜드 개요</a>
+                <a href="#services" class="block nav-link text-base">서비스</a>
+                <a href="#strategy" class="block nav-link text-base">차별화 전략</a>
+                <a href="#target" class="block nav-link text-base">타깃 고객</a>
+                <a href="#growth" class="block nav-link text-base">성장 전략</a>
+                <a href="#contact" class="block nav-link text-base">문의</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-bg text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center bg-black bg-opacity-50 p-10 rounded-lg">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
+                공간의 약(Place + Pharm), <br class="sm:hidden"> 사람과 지구를 위한 친환경 위생관리 솔루션
+            </h1>
+            <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
+                플레이스팜 클린은 단순한 청소를 넘어 환경보호, 공공보건, 지속가능한 공간 케어를 추구합니다.
+            </p>
+            <a href="#services" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors">
+                서비스 둘러보기
+            </a>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <section id="about" class="py-12">
+            <h2 class="section-title">1. 브랜드 개요</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-2xl font-semibold text-green-600 mb-3">1.1 브랜드 철학</h3>
+                    <p class="text-gray-700 mb-4">
+                        <strong>플레이스팜 클린(Placepharm Clean)</strong>은 ‘공간에 약을 처방하듯이’, 사람과 지구 모두의 건강을 위한 친환경 위생관리 솔루션을 제공합니다. 단순한 청소나 소독을 넘어 환경보호, 공공보건, 지속가능한 공간 케어를 추구합니다.
+                    </p>
+                    <p class="text-green-700 font-semibold p-3 bg-green-50 rounded-md">
+                        ✔ "사람에게 안전하고, 지구에 해가 없는 위생관리"를 지향합니다.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-semibold text-green-600 mb-3">1.2 미션과 비전</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <h4 class="text-lg font-medium text-gray-800">MISSION:</h4>
+                            <p class="text-gray-700">지속가능한 공간을 위한 친환경 위생 솔루션 제공</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-medium text-gray-800">VISION:</h4>
+                            <p class="text-gray-700">대한민국 대표 에코-위생 솔루션 전문기업으로 성장</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="analysis" class="py-12 bg-green-50 rounded-xl p-6 md:p-10">
+            <h2 class="section-title">2. 산업 및 환경 분석</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card bg-white">
+                    <h3 class="text-2xl font-semibold text-green-600 mb-3">2.1 시장 트렌드</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>기후 위기 및 탄소중립 시대에 따른 친환경 경영 의무화</li>
+                        <li>실내 공기질, 감염병 대응에 대한 사회적 경각심 증가</li>
+                        <li>제로웨이스트 건물관리에 대한 수요 확대</li>
+                    </ul>
+                </div>
+                <div class="card bg-white">
+                    <h3 class="text-2xl font-semibold text-green-600 mb-3">2.2 ESG 및 제도 흐름</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>탄소중립 기본법 시행(2022) 이후, 공공기관·교육기관은 친환경 관리가 필수</li>
+                        <li>감염병예방법 및 환경보건법 기준 준수 필요</li>
+                        <li>사회적기업 인증·지속가능경영보고서 기준에서도 위생·안전·환경 관리 지표 포함</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-12">
+            <h2 class="section-title">3. 친환경 중심 서비스 구성</h2>
+            <div class="table-responsive card">
+                <table class="w-full">
+                    <thead>
+                        <tr>
+                            <th>서비스 카테고리</th>
+                            <th>세부 서비스</th>
+                            <th>친환경 요소</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="font-semibold text-green-700">🌱 에코 클린</td>
+                            <td>바닥·유리 청소, 고온스팀 세척</td>
+                            <td>생분해성 세정제 사용, 물 사용량 최소화</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold text-green-700">🌿 소독&방역</td>
+                            <td>병원균·해충 살균, UV 오존 소독</td>
+                            <td>무독성 약제, 잔류물 없는 천연살균수</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold text-green-700">🌾 공기질 개선</td>
+                            <td>새집증후군 제거, VOC·포름알데히드 정화</td>
+                            <td>활성탄+천연 정화액 활용</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold text-green-700">� 친환경 컨설팅</td>
+                            <td>위생 평가 및 인증 대응, 친환경 건물관리 계획 수립</td>
+                            <td>탄소저감 전략 포함 컨설팅</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="strategy" class="py-12">
+            <h2 class="section-title">4. 차별화 전략</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-green-600 mb-3">4.1 기술과 친환경의 융합</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm">
+                        <li>무독성 천연성분의 살균제 (에탄올, 자몽씨 추출물 등)</li>
+                        <li>전기소독기, 수증기세척기 등 화학약제 대체 장비 사용</li>
+                        <li>친환경 인증 마크 부착 가능 (ESG 대응)</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-green-600 mb-3">4.2 폐기물 저감 시스템</h3>
+                     <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm">
+                        <li>재사용 가능한 클리닝 툴 보급</li>
+                        <li>일회용품 최소화 및 생분해성 위생 용품 도입</li>
+                        <li>Zero Waste 관리 매뉴얼 제공</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-green-600 mb-3">4.3 소비자 신뢰 확보</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm">
+                        <li>소독·방역 사후 인증서 제공</li>
+                        <li>서비스 전/후 비교 이미지 제공 → 시각적 신뢰</li>
+                        <li>고객 맞춤형 보고서 자동 전송 시스템 운영</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="revenue" class="py-12 bg-green-50 rounded-xl p-6 md:p-10">
+            <h2 class="section-title">5. 수익 모델 및 비즈니스 구조</h2>
+            <div class="table-responsive card bg-white">
+                 <table>
+                    <thead>
+                        <tr>
+                            <th>수익 항목</th>
+                            <th>설명</th>
+                            <th>비중(예상)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>친환경 정기 클린 계약</td>
+                            <td>ESG 경영 도입 기업 대상 월간 위생관리</td>
+                            <td>45%</td>
+                        </tr>
+                        <tr>
+                            <td>친환경 방역 서비스</td>
+                            <td>어린이집, 병원, 학교 대상 요청형 방역</td>
+                            <td>30%</td>
+                        </tr>
+                        <tr>
+                            <td>공공기관 및 학교 위생 컨설팅</td>
+                            <td>정부·지자체와의 입찰 및 인증 대응</td>
+                            <td>15%</td>
+                        </tr>
+                        <tr>
+                            <td>B2B 지속가능관리 솔루션</td>
+                            <td>프랜차이즈·대형 건물의 위생 수명주기 관리</td>
+                            <td>10%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="target" class="py-12">
+            <h2 class="section-title">6. 주요 타깃 고객</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card text-center">
+                    <div class="text-4xl mb-3">🏢</div>
+                    <h3 class="font-semibold text-green-700">민간·공공기관</h3>
+                    <p class="text-sm text-gray-600">ESG 대응 필요</p>
+                </div>
+                <div class="card text-center">
+                    <div class="text-4xl mb-3">👶👵</div>
+                    <h3 class="font-semibold text-green-700">어린이·노약자 시설</h3>
+                    <p class="text-sm text-gray-600">유치원, 요양원, 병원 등</p>
+                </div>
+                <div class="card text-center">
+                    <div class="text-4xl mb-3">🏡</div>
+                    <h3 class="font-semibold text-green-700">리모델링 후 공간</h3>
+                    <p class="text-sm text-gray-600">친환경 사후 위생관리</p>
+                </div>
+                <div class="card text-center">
+                    <div class="text-4xl mb-3">🏬</div>
+                    <h3 class="font-semibold text-green-700">소상공인</h3>
+                    <p class="text-sm text-gray-600">지속가능 공간 지향</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="marketing" class="py-12 bg-green-50 rounded-xl p-6 md:p-10">
+            <h2 class="section-title">7. 친환경 마케팅 전략</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card bg-white">
+                    <h3 class="text-xl font-semibold text-green-600 mb-3">7.1 브랜드 콘텐츠 전략</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm">
+                        <li>“숨 쉬는 공간, 클린한 삶” 캠페인</li>
+                        <li>블로그·인스타그램·유튜브에서 살균 전후 사례 + 친환경 스토리텔링</li>
+                        <li>‘우리 건물, 탄소를 줄이다’ ESG 인증 연계 콘텐츠 제공</li>
+                    </ul>
+                </div>
+                <div class="card bg-white">
+                    <h3 class="text-xl font-semibold text-green-600 mb-3">7.2 협업 및 채널 확대</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm">
+                        <li>환경 NGO, 지역 커뮤니티와의 공동 캠페인</li>
+                        <li>공공기관 대상 지속가능 위생 교육 프로그램 운영</li>
+                        <li>건축 리모델링업체, 그린리모델링센터와 파트너십 체결</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="operations" class="py-12">
+            <h2 class="section-title">8. 운영 및 품질관리 체계</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-green-600 mb-3">8.1 인력 및 장비 운영</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm">
+                        <li>친환경 소독 방역 전문 교육 이수자 전담 배치</li>
+                        <li>장비: 고온스팀살균기, 친환경세척기, UV램프, VOC측정기 등</li>
+                        <li>이동식 공기질 진단키트 + 리포트 발급 시스템</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-green-600 mb-3">8.2 지속가능성 관리</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm">
+                        <li>서비스 이력 및 위생 변화 이력 DB화</li>
+                        <li>고객 자산의 위생 수명주기(Life Cycle) 기반 맞춤 관리</li>
+                        <li>탄소저감 보고서 및 환경영향 리포트 제공 (옵션)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="growth" class="py-12">
+            <h2 class="section-title">9. 향후 성장 전략</h2>
+            <div>
+                <div class="mb-4 flex border-b border-gray-200">
+                    <button data-tab="short-term" class="tab-button active">단기 (1년 내)</button>
+                    <button data-tab="mid-term" class="tab-button">중기 (2~3년)</button>
+                    <button data-tab="long-term" class="tab-button">장기 (5년)</button>
+                </div>
+                <div id="short-term" class="tab-content">
+                    <h3 class="text-xl font-semibold text-green-700 mb-2">단기 (1년 내)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>인천·경기 남부 중심 영업 거점 3개 확보</li>
+                        <li>친환경 키워드 중심 포지셔닝 확보 (온라인 채널 1만 도달)</li>
+                    </ul>
+                </div>
+                <div id="mid-term" class="tab-content hidden">
+                    <h3 class="text-xl font-semibold text-green-700 mb-2">중기 (2~3년)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>친환경 위생 인증 플랫폼 출시 (SaaS 모델)</li>
+                        <li>공공입찰 수주 및 학교/지자체 클린프로젝트 참여 확대</li>
+                    </ul>
+                </div>
+                <div id="long-term" class="tab-content hidden">
+                    <h3 class="text-xl font-semibold text-green-700 mb-2">장기 (5년)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>ESG+IoT 기반 “스마트 클린 빌딩 케어 플랫폼” 구축</li>
+                        <li>위생+환경 통합관리 기업으로 글로벌 확장 (베트남, 태국 등 동남아 진출 가능성 검토)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusion" class="py-12 bg-green-600 text-white rounded-xl p-8 md:p-12 text-center">
+            <h2 class="text-3xl font-bold mb-6">플레이스팜 클린의 약속</h2>
+            <p class="text-lg mb-4 max-w-3xl mx-auto">
+                플레이스팜 클린은 ‘사람과 지구 모두에게 안전한 공간’을 만들기 위한 친환경 위생관리 전문 브랜드입니다.
+                공간에 약을 처방하듯, 해충 없는 집, 세균 없는 교실, 공기 맑은 사무실을 만들어갑니다.
+            </p>
+            <p class="text-md font-light italic max-w-2xl mx-auto">
+                위생·보건·환경·ESG의 교차점에서 작지만 지속가능한 실천을 제공하는 이 브랜드는, 신뢰와 윤리, 기술과 감성을 동시에 담은 클린 솔루션의 미래상입니다.
+            </p>
+        </section>
+        
+        <section id="contact" class="py-12">
+            <h2 class="section-title">문의하기</h2>
+            <div class="card max-w-2xl mx-auto text-center">
+                <p class="text-gray-700 mb-4">
+                    플레이스팜 클린의 친환경 위생 솔루션에 대해 더 궁금한 점이 있으신가요? <br>언제든지 문의해주세요.
+                </p>
+                <a href="mailto:contact@placepharmclean.com" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors">
+                    이메일 문의하기
+                </a>
+                <p class="mt-4 text-sm text-gray-600">전화: 010-1234-5678 (예시)</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; <span id="currentYear"></span> PLACEPHARM CLEAN. 모든 권리 보유.</p>
+            <p class="text-sm text-gray-400 mt-1">친환경 위생관리 솔루션으로 건강한 공간을 만듭니다.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 네비게이션 바 스티키 효과
+        const navbar = document.getElementById('navbar');
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > 50) { // 50px 이상 스크롤되면 상단에 고정
+                navbar.classList.add('sticky-nav');
+            } else {
+                navbar.classList.remove('sticky-nav');
+            }
+            // 스크롤 올릴 때만 네비게이션 보이기 (선택적)
+            // if (scrollTop > lastScrollTop && scrollTop > 200) { // 스크롤 내릴 때
+            //     navbar.style.top = '-80px'; // 네비게이션 높이만큼 숨김
+            // } else { // 스크롤 올릴 때
+            //     navbar.style.top = '0';
+            // }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        });
+
+        // 부드러운 스크롤
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const offsetTop = targetElement.offsetTop - (navbar.classList.contains('sticky-nav') ? navbar.offsetHeight : 0);
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                    // 모바일 메뉴 닫기
+                    if(mobileMenu.classList.contains('block') && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        menuIconOpen.classList.remove('hidden');
+                        menuIconClose.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // 현재 연도 자동 업데이트
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // 모바일 메뉴 토글
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIconOpen = document.getElementById('menu-icon-open');
+        const menuIconClose = document.getElementById('menu-icon-close');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuIconOpen.classList.toggle('hidden');
+            menuIconClose.classList.toggle('hidden');
+        });
+        
+        // 탭 기능 (성장 전략)
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetTab = button.dataset.tab;
+
+                tabButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                    btn.classList.remove('bg-green-600', 'text-white');
+                    btn.classList.add('bg-gray-200', 'hover:bg-gray-300', 'text-gray-700');
+                });
+                button.classList.add('active');
+                button.classList.remove('bg-gray-200', 'hover:bg-gray-300', 'text-gray-700');
+                button.classList.add('bg-green-600', 'text-white');
+
+
+                tabContents.forEach(content => {
+                    if (content.id === targetTab) {
+                        content.classList.remove('hidden');
+                    } else {
+                        content.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+    </script>
+
 </body>
 </html>
