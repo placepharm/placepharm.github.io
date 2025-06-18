@@ -210,60 +210,87 @@
       </div>
     </section>
 
-    <section id="target">
-      <h2 class="section-title font-extrabold">🎯 타깃 고객</h2>
-      <div class="grid md:grid-cols-3 gap-6 text-center">
-        <div class="card bg-blue-100 hover:scale-105 hover:bg-blue-200 transition-all duration-300">
-          <div class="text-5xl mb-2 relative">
-            <span class="absolute inset-0 flex items-center justify-center rounded-full border-4 border-blue-300 opacity-20"></span>
-            🏢
-          </div>
-          <p class="font-bold text-blue-700">공공기관</p>
-        </div>
-        <div class="card bg-green-100 hover:scale-105 hover:bg-green-200 transition-all duration-300">
-          <div class="text-5xl mb-2 relative">
-            <span class="absolute inset-0 flex items-center justify-center rounded-full border-4 border-green-300 opacity-20"></span>
-            🏥
-          </div>
-          <p class="font-bold text-green-700">의료·요양시설</p>
-        </div>
-        <div class="card bg-yellow-100 hover:scale-105 hover:bg-yellow-200 transition-all duration-300">
-          <div class="text-5xl mb-2 relative">
-            <span class="absolute inset-0 flex items-center justify-center rounded-full border-4 border-yellow-300 opacity-20"></span>
-            🏫
-          </div>
-          <p class="font-bold text-yellow-700">교육기관</p>
-        </div>
-        <div class="card bg-red-100 hover:scale-105 hover:bg-red-200 transition-all duration-300">
-          <div class="text-5xl mb-2 relative">
-            <span class="absolute inset-0 flex items-center justify-center rounded-full border-4 border-red-300 opacity-20"></span>
-            🏭
-          </div>
-          <p class="font-bold text-red-700">식품 제조업체</p>
-        </div>
-        <div class="card bg-purple-100 hover:scale-105 hover:bg-purple-200 transition-all duration-300">
-          <div class="text-5xl mb-2 relative">
-            <span class="absolute inset-0 flex items-center justify-center rounded-full border-4 border-purple-300 opacity-20"></span>
-            🏬
-          </div>
-          <p class="font-bold text-purple-700">레스토랑</p>
-        </div>
-        <div class="card bg-pink-100 hover:scale-105 hover:bg-pink-200 transition-all duration-300">
-          <div class="text-5xl mb-2 relative">
-            <span class="absolute inset-0 flex items-center justify-center rounded-full border-4 border-pink-300 opacity-20"></span>
-            🏡
-          </div>
-          <p class="font-bold text-pink-700">아파트</p>
-        </div>
-        <div class="card bg-orange-100 hover:scale-105 hover:bg-orange-200 transition-all duration-300">
-          <div class="text-5xl mb-2 relative">
-            <span class="absolute inset-0 flex items-center justify-center rounded-full border-4 border-orange-300 opacity-20"></span>
-            🏪
-          </div>
-          <p class="font-bold text-orange-700">소상공인</p>
-        </div>
+<section id="target" class="max-w-7xl mx-auto px-4 py-20">
+  <h2 class="section-title font-extrabold text-center mb-8">🎯 타깃 고객</h2>
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <!-- 공공기관 -->
+    <div class="group relative w-full h-48 rounded-xl shadow-lg overflow-hidden cursor-pointer">
+      <img src="/images/TC1.png" alt="공공기관"
+           class="w-full h-full object-cover filter brightness-100 contrast-100
+                  transition duration-300 ease-in-out
+                  group-hover:brightness-125 group-hover:contrast-125" />
+      <div class="absolute bottom-4 left-4 bg-white bg-opacity-70 px-3 py-1 rounded text-sm font-semibold text-gray-800">
+        공공기관
       </div>
-    </section>
+    </div>
+
+    <!-- 의료·요양시설 -->
+    <div class="group relative w-full h-48 rounded-xl shadow-lg overflow-hidden cursor-pointer">
+      <img src="/images/TC2.png" alt="의료·요양시설"
+           class="w-full h-full object-cover filter brightness-100 contrast-100
+                  transition duration-300 ease-in-out
+                  group-hover:brightness-125 group-hover:contrast-125" />
+      <div class="absolute bottom-4 left-4 bg-white bg-opacity-70 px-3 py-1 rounded text-sm font-semibold text-gray-800">
+        의료·요양시설
+      </div>
+    </div>
+
+    <!-- 교육기관 -->
+    <div class="group relative w-full h-48 rounded-xl shadow-lg overflow-hidden cursor-pointer">
+      <img src="/images/TC3.png" alt="교육기관"
+           class="w-full h-full object-cover filter brightness-100 contrast-100
+                  transition duration-300 ease-in-out
+                  group-hover:brightness-125 group-hover:contrast-125" />
+      <div class="absolute bottom-4 left-4 bg-white bg-opacity-70 px-3 py-1 rounded text-sm font-semibold text-gray-800">
+        교육기관
+      </div>
+    </div>
+
+    <!-- 식품 제조업체 -->
+    <div class="group relative w-full h-48 rounded-xl shadow-lg overflow-hidden cursor-pointer">
+      <img src="/images/TC4.png" alt="식품 제조업체"
+           class="w-full h-full object-cover filter brightness-100 contrast-100
+                  transition duration-300 ease-in-out
+                  group-hover:brightness-125 group-hover:contrast-125" />
+      <div class="absolute bottom-4 left-4 bg-white bg-opacity-70 px-3 py-1 rounded text-sm font-semibold text-gray-800">
+        식품 제조업체
+      </div>
+    </div>
+
+    <!-- 레스토랑 -->
+    <div class="group relative w-full h-48 rounded-xl shadow-lg overflow-hidden cursor-pointer">
+      <img src="/images/TC5.png" alt="레스토랑"
+           class="w-full h-full object-cover filter brightness-100 contrast-100
+                  transition duration-300 ease-in-out
+                  group-hover:brightness-125 group-hover:contrast-125" />
+      <div class="absolute bottom-4 left-4 bg-white bg-opacity-70 px-3 py-1 rounded text-sm font-semibold text-gray-800">
+        레스토랑
+      </div>
+    </div>
+
+    <!-- 아파트 -->
+    <div class="group relative w-full h-48 rounded-xl shadow-lg overflow-hidden cursor-pointer">
+      <img src="/images/TC6.png" alt="아파트"
+           class="w-full h-full object-cover filter brightness-100 contrast-100
+                  transition duration-300 ease-in-out
+                  group-hover:brightness-125 group-hover:contrast-125" />
+      <div class="absolute bottom-4 left-4 bg-white bg-opacity-70 px-3 py-1 rounded text-sm font-semibold text-gray-800">
+        아파트
+      </div>
+    </div>
+
+    <!-- 소상공인 -->
+    <div class="group relative w-full h-48 rounded-xl shadow-lg overflow-hidden cursor-pointer">
+      <img src="/images/TC7.png" alt="소상공인"
+           class="w-full h-full object-cover filter brightness-100 contrast-100
+                  transition duration-300 ease-in-out
+                  group-hover:brightness-125 group-hover:contrast-125" />
+      <div class="absolute bottom-4 left-4 bg-white bg-opacity-70 px-3 py-1 rounded text-sm font-semibold text-gray-800">
+        소상공인
+      </div>
+    </div>
+  </div>
+</section>
 
     <section id="reviews">
       <h2 class="section-title font-extrabold">🌟 고객 후기</h2>
