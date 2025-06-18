@@ -10,14 +10,45 @@
   <style>
     body {
       font-family: 'Noto Sans KR', sans-serif;
-      font-size: 16px; /* 글자 크기 */
-      line-height: 1.6; /* 줄 간격 */
+      font-size: 16px;
+      line-height: 1.6;
     }
     .section-title {
-      @apply text-3xl font-bold text-green-700 mb-12 text-center tracking-wide;
+      font-size: 1.875rem;
+      font-weight: 700;
+      color: #15803d; /* green-700 */
+      margin-bottom: 3rem;
+      text-align: center;
+      letter-spacing: 0.05em;
     }
     .card {
-      @apply bg-white rounded-xl shadow-lg overflow-hidden p-6 transition-all duration-300 hover:shadow-2xl space-y-2;
+      background-color: #fff;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+      overflow: hidden;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+    }
+    .animate-fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-400 { animation-delay: 0.4s; }
+    .delay-600 { animation-delay: 0.6s; }
+    .animate-bounce-in {
+      animation: bounceIn 1s ease-out;
+    }
+    @keyframes bounceIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      50% { transform: scale(1.1); opacity: 0.8; }
+      100% { transform: scale(1); opacity: 1; }
     }
   </style>
 </head>
@@ -226,7 +257,6 @@
         공공기관
       </div>
     </div>
-
     <!-- 의료·요양시설 -->
     <div class="group relative w-full h-48 rounded-xl shadow-lg overflow-hidden cursor-pointer">
       <img src="/images/TC2.png" alt="의료·요양시설"
@@ -237,7 +267,6 @@
         의료·요양시설
       </div>
     </div>
-
     <!-- 교육기관 -->
     <div class="group relative w-full h-48 rounded-xl shadow-lg overflow-hidden cursor-pointer">
       <img src="/images/TC3.png" alt="교육기관"
@@ -248,7 +277,6 @@
         교육기관
       </div>
     </div>
-
     <!-- 식품 제조업체 -->
     <div class="group relative w-full h-48 rounded-xl shadow-lg overflow-hidden cursor-pointer">
       <img src="/images/TC4.png" alt="식품 제조업체"
@@ -259,7 +287,6 @@
         식품 제조업체
       </div>
     </div>
-
     <!-- 레스토랑 -->
     <div class="group relative w-full h-48 rounded-xl shadow-lg overflow-hidden cursor-pointer">
       <img src="/images/TC5.png" alt="레스토랑"
@@ -270,7 +297,6 @@
         레스토랑
       </div>
     </div>
-
     <!-- 아파트 -->
     <div class="group relative w-full h-48 rounded-xl shadow-lg overflow-hidden cursor-pointer">
       <img src="/images/TC6.png" alt="아파트"
@@ -281,7 +307,6 @@
         아파트
       </div>
     </div>
-
     <!-- 소상공인 -->
     <div class="group relative w-full h-48 rounded-xl shadow-lg overflow-hidden cursor-pointer">
       <img src="/images/TC7.png" alt="소상공인"
@@ -294,6 +319,7 @@
     </div>
   </div>
 </section>
+
 
     <section id="reviews">
       <h2 class="section-title font-extrabold">🌟 고객 후기</h2>
