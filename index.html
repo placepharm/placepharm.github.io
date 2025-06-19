@@ -249,146 +249,126 @@
 
 <section id="target" class="max-w-7xl mx-auto px-4 py-20">
   <h2 class="section-title font-extrabold text-center mb-8">🎯 타깃 고객</h2>
-  <div class="space-y-8">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-   <!-- 카드: 공공기관 -->
-    <div onclick="toggleDetails('card1')" class="group cursor-pointer rounded-xl overflow-hidden shadow-lg">
-      <img src="/images/TC1.png" alt="공공기관" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" />
-      <div class="p-3 font-semibold text-gray-800">공공기관</div>
-    </div>
-    <div id="card1-details" class="hidden bg-white border border-gray-200 rounded-xl p-4 text-sm">
-      <h3 class="text-green-700 font-bold mb-2">📌 요약 설명</h3>
-      <table class="w-full table-auto text-left">
-        <tr><td class="font-medium text-gray-700">대상</td><td>공공기관</td></tr>
-        <tr><td class="font-medium text-gray-700">필요</td><td>공공청사, 민원실 위생</td></tr>
-        <tr><td class="font-medium text-gray-700">서비스</td><td>살균소독, 공기질 개선</td></tr>
-      </table>
+    <!-- 카드 1: 공공기관 -->
+    <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer">
+      <img src="/images/TC1.png" alt="공공기관" class="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-110" />
+      <div class="absolute inset-0 bg-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-center">
+        <h3 class="text-green-700 font-bold mb-2 text-lg">📌 공공기관</h3>
+        <p class="text-sm text-gray-800 mb-1"><strong>대상:</strong> 공공기관</p>
+        <p class="text-sm text-gray-800 mb-1"><strong>필요:</strong> 공공청사, 민원실 위생</p>
+        <p class="text-sm text-gray-800 mb-1"><strong>서비스:</strong> 살균소독, 공기질 개선</p>
+        <p class="text-sm text-gray-700"><strong>특징:</strong> HACCP·ISO 기준 기반 위생관리, 시각자료 및 리포트 제공</p>
+      </div>
     </div>
 
-    <!-- 카드: 의료·요양시설 -->
-    <div onclick="toggleDetails('card2')" class="group cursor-pointer rounded-xl overflow-hidden shadow-lg">
-      <img src="/images/TC2.png" alt="의료·요양시설" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" />
-      <div class="p-3 font-semibold text-gray-800">의료·요양시설</div>
-    </div>
-    <div id="card2-details" class="hidden bg-white border border-gray-200 rounded-xl p-4 text-sm">
-      <h3 class="text-green-700 font-bold mb-2">📌 요약 설명</h3>
-      <table class="w-full table-auto text-left">
-        <tr><td class="font-medium text-gray-700">대상</td><td>의료·요양시설</td></tr>
-        <tr><td class="font-medium text-gray-700">필요</td><td>감염 예방, 무독성 약품</td></tr>
-        <tr><td class="font-medium text-gray-700">서비스</td><td>정기소독, 바이러스 방역</td></tr>
-      </table>
+    <!-- 카드 2: 의료·요양시설 -->
+    <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer">
+      <img src="/images/TC2.png" alt="의료·요양시설" class="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-110" />
+      <div class="absolute inset-0 bg-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-center">
+        <h3 class="text-green-700 font-bold mb-2 text-lg">📌 의료·요양시설</h3>
+        <p class="text-sm text-gray-800 mb-1"><strong>대상:</strong> 의료·요양시설</p>
+        <p class="text-sm text-gray-800 mb-1"><strong>필요:</strong> 감염 예방, 무독성 약품</p>
+        <p class="text-sm text-gray-800 mb-1"><strong>서비스:</strong> 정기소독, 바이러스 방역</p>
+        <p class="text-sm text-gray-700"><strong>특징:</strong> ISO 인증 기준 적용, 작업 후 보고서 제공</p>
+      </div>
     </div>
 
-    <!-- 카드: 교육기관 -->
-    <div onclick="toggleDetails('card3')" class="group cursor-pointer rounded-xl overflow-hidden shadow-lg">
-      <img src="/images/TC3.png" alt="교육기관" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" />
-      <div class="p-3 font-semibold text-gray-800">교육기관</div>
-    </div>
-    <div id="card3-details" class="hidden bg-white border border-gray-200 rounded-xl p-4 text-sm">
-      <h3 class="text-green-700 font-bold mb-2">📌 요약 설명</h3>
-      <table class="w-full table-auto text-left">
-        <tr><td class="font-medium text-gray-700">대상</td><td>교육기관</td></tr>
-        <tr><td class="font-medium text-gray-700">필요</td><td>교실/실험실 위생, 학생 안전</td></tr>
-        <tr><td class="font-medium text-gray-700">서비스</td><td>소독, 청소, VOC 제거</td></tr>
-      </table>
+    <!-- 카드 3: 교육기관 -->
+    <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer">
+      <img src="/images/TC3.png" alt="교육기관" class="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-110" />
+      <div class="absolute inset-0 bg-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-center">
+        <h3 class="text-green-700 font-bold mb-2 text-lg">📌 교육기관</h3>
+        <p class="text-sm text-gray-800 mb-1"><strong>대상:</strong> 교육기관</p>
+        <p class="text-sm text-gray-800 mb-1"><strong>필요:</strong> 교실/실험실 위생, 학생 안전</p>
+        <p class="text-sm text-gray-800 mb-1"><strong>서비스:</strong> 소독, 청소, VOC 제거</p>
+        <p class="text-sm text-gray-700"><strong>특징:</strong> 친환경 소독과 학부모 신뢰 강화를 위한 이미지 보고</p>
+      </div>
     </div>
 
-    <!-- 카드: 식품 제조업체 -->
-    <div onclick="toggleDetails('card4')" class="group cursor-pointer rounded-xl overflow-hidden shadow-lg">
-      <img src="/images/TC4.png" alt="식품 제조업체" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" />
-      <div class="p-3 font-semibold text-gray-800">식품 제조업체</div>
-    </div>
-    <div id="card4-details" class="hidden bg-white border border-gray-200 rounded-xl p-4 text-sm">
-      <h3 class="text-green-700 font-bold mb-2">📌 요약 설명</h3>
-      <table class="w-full table-auto text-left">
-        <tr><td class="font-medium text-gray-700">대상</td><td>식품 제조업체</td></tr>
-        <tr><td class="font-medium text-gray-700">필요</td><td>HACCP 기준, 생산 설비 위생</td></tr>
-        <tr><td class="font-medium text-gray-700">서비스</td><td>에탄올/IPA 소독, 방제</td></tr>
-      </table>
+    <!-- 카드 4: 식품 제조업체 -->
+    <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer">
+      <img src="/images/TC4.png" alt="식품 제조업체" class="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-110" />
+      <div class="absolute inset-0 bg-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-center">
+        <h3 class="text-green-700 font-bold mb-2 text-lg">📌 식품 제조업체</h3>
+        <p class="text-sm text-gray-800 mb-1"><strong>대상:</strong> 식품 제조업체</p>
+        <p class="text-sm text-gray-800 mb-1"><strong>필요:</strong> HACCP 기준, 생산 설비 위생</p>
+        <p class="text-sm text-gray-800 mb-1"><strong>서비스:</strong> 에탄올/IPA 소독, 방제</p>
+        <p class="text-sm text-gray-700"><strong>특징:</strong> 식품 접촉면 인증 리포트 제공, 실시간 기록관리</p>
+      </div>
     </div>
 
-    <!-- 카드: 레스토랑 -->
-    <div onclick="toggleDetails('card5')" class="group cursor-pointer rounded-xl overflow-hidden shadow-lg">
-      <img src="/images/TC5.png" alt="레스토랑" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" />
-      <div class="p-3 font-semibold text-gray-800">레스토랑</div>
-    </div>
-    <div id="card5-details" class="hidden bg-white border border-gray-200 rounded-xl p-4 text-sm">
-      <h3 class="text-green-700 font-bold mb-2">📌 요약 설명</h3>
-      <table class="w-full table-auto text-left">
-        <tr><td class="font-medium text-gray-700">대상</td><td>레스토랑</td></tr>
-        <tr><td class="font-medium text-gray-700">필요</td><td>홀/주방 위생, 고객 신뢰</td></tr>
-        <tr><td class="font-medium text-gray-700">서비스</td><td>일일 위생관리, 소독 리포트</td></tr>
-      </table>
+    <!-- 카드 5: 레스토랑 -->
+    <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer">
+      <img src="/images/TC5.png" alt="레스토랑" class="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-110" />
+      <div class="absolute inset-0 bg-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-center">
+        <h3 class="text-green-700 font-bold mb-2 text-lg">📌 레스토랑</h3>
+        <p class="text-sm text-gray-800 mb-1"><strong>대상:</strong> 레스토랑</p>
+        <p class="text-sm text-gray-800 mb-1"><strong>필요:</strong> 홀/주방 위생, 고객 신뢰</p>
+        <p class="text-sm text-gray-800 mb-1"><strong>서비스:</strong> 일일 위생관리, 소독 리포트</p>
+        <p class="text-sm text-gray-700"><strong>특징:</strong> 위생 점검 내역을 이미지로 제공하며 고객 신뢰 확보</p>
+      </div>
     </div>
 
-    <!-- 카드: 아파트 -->
-    <div onclick="toggleDetails('card6')" class="group cursor-pointer rounded-xl overflow-hidden shadow-lg">
-      <img src="/images/TC6.png" alt="아파트" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" />
-      <div class="p-3 font-semibold text-gray-800">아파트</div>
-    </div>
-    <div id="card6-details" class="hidden bg-white border border-gray-200 rounded-xl p-4 text-sm">
-      <h3 class="text-green-700 font-bold mb-2">📌 요약 설명</h3>
-      <table class="w-full table-auto text-left">
-        <tr><td class="font-medium text-gray-700">대상</td><td>아파트</td></tr>
-        <tr><td class="font-medium text-gray-700">필요</td><td>공용공간(엘리베이터, 계단) 위생</td></tr>
-        <tr><td class="font-medium text-gray-700">서비스</td><td>일상 청소, 정기 방역</td></tr>
-      </table>
+    <!-- 카드 6: 아파트 -->
+    <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer">
+      <img src="/images/TC6.png" alt="아파트" class="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-110" />
+      <div class="absolute inset-0 bg-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-center">
+        <h3 class="text-green-700 font-bold mb-2 text-lg">📌 아파트</h3>
+        <p class="text-sm text-gray-800 mb-1"><strong>대상:</strong> 공동주택</p>
+        <p class="text-sm text-gray-800 mb-1"><strong>필요:</strong> 공용 공간, 엘리베이터, 계단 위생</p>
+        <p class="text-sm text-gray-800 mb-1"><strong>서비스:</strong> 일상 청소, 정기 방역</p>
+        <p class="text-sm text-gray-700"><strong>특징:</strong> 입주민 만족도를 높이는 청소 품질 인증 리포트 제공</p>
+      </div>
     </div>
 
-    <!-- 카드: 소상공인 -->
-    <div onclick="toggleDetails('card7')" class="group cursor-pointer rounded-xl overflow-hidden shadow-lg">
-      <img src="/images/TC7.png" alt="소상공인" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" />
-      <div class="p-3 font-semibold text-gray-800">소상공인</div>
-    </div>
-    <div id="card7-details" class="hidden bg-white border border-gray-200 rounded-xl p-4 text-sm">
-      <h3 class="text-green-700 font-bold mb-2">📌 요약 설명</h3>
-      <table class="w-full table-auto text-left">
-        <tr><td class="font-medium text-gray-700">대상</td><td>소상공인 매장</td></tr>
-        <tr><td class="font-medium text-gray-700">필요</td><td>고객 응대 위생, 출입구 관리</td></tr>
-        <tr><td class="font-medium text-gray-700">서비스</td><td>클린존 조성, 손잡이 소독</td></tr>
-      </table>
+    <!-- 카드 7: 소상공인 -->
+    <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer">
+      <img src="/images/TC7.png" alt="소상공인" class="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-110" />
+      <div class="absolute inset-0 bg-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-center">
+        <h3 class="text-green-700 font-bold mb-2 text-lg">📌 소상공인</h3>
+        <p class="text-sm text-gray-800 mb-1"><strong>대상:</strong> 매장, 상점, 카페</p>
+        <p class="text-sm text-gray-800 mb-1"><strong>필요:</strong> 고객 응대 공간 위생</p>
+        <p class="text-sm text-gray-800 mb-1"><strong>서비스:</strong> 손잡이 소독, 클린존 유지</p>
+        <p class="text-sm text-gray-700"><strong>특징:</strong> 고객 접점 위생 인증 스티커 및 비교 리포트 제공</p>
+      </div>
     </div>
 
-    <!-- 카드: 수영장 -->
-    <div onclick="toggleDetails('card8')" class="group cursor-pointer rounded-xl overflow-hidden shadow-lg">
-      <img src="/images/TC8.png" alt="수영장" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" />
-      <div class="p-3 font-semibold text-gray-800">수영장</div>
-    </div>
-    <div id="card8-details" class="hidden bg-white border border-gray-200 rounded-xl p-4 text-sm">
-      <h3 class="text-green-700 font-bold mb-2">📌 요약 설명</h3>
-      <table class="w-full table-auto text-left">
-        <tr><td class="font-medium text-gray-700">대상</td><td>실내외 수영장</td></tr>
-        <tr><td class="font-medium text-gray-700">필요</td><td>곰팡이, 습기, 냄새 관리</td></tr>
-        <tr><td class="font-medium text-gray-700">서비스</td><td>고온스팀 청소, 탈취소독</td></tr>
-      </table>
+    <!-- 카드 8: 수영장 -->
+    <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer">
+      <img src="/images/TC8.png" alt="수영장" class="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-110" />
+      <div class="absolute inset-0 bg-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-center">
+        <h3 class="text-green-700 font-bold mb-2 text-lg">📌 수영장</h3>
+        <p class="text-sm text-gray-800 mb-1"><strong>대상:</strong> 실내외 수영장</p>
+        <p class="text-sm text-gray-800 mb-1"><strong>필요:</strong> 습기, 곰팡이, 냄새 제거</p>
+        <p class="text-sm text-gray-800 mb-1"><strong>서비스:</strong> 고온 스팀청소, 탈취소독</p>
+        <p class="text-sm text-gray-700"><strong>특징:</strong> 실시간 수질 위생 체크 및 주기적 리포트 제공</p>
+      </div>
     </div>
 
-    <!-- 카드: 라운지 -->
-    <div onclick="toggleDetails('card9')" class="group cursor-pointer rounded-xl overflow-hidden shadow-lg">
-      <img src="/images/TC9.png" alt="라운지" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" />
-      <div class="p-3 font-semibold text-gray-800">라운지</div>
-    </div>
-    <div id="card9-details" class="hidden bg-white border border-gray-200 rounded-xl p-4 text-sm">
-      <h3 class="text-green-700 font-bold mb-2">📌 요약 설명</h3>
-      <table class="w-full table-auto text-left">
-        <tr><td class="font-medium text-gray-700">대상</td><td>라운지, 공유공간</td></tr>
-        <tr><td class="font-medium text-gray-700">필요</td><td>불특정 다수 이용공간 위생</td></tr>
-        <tr><td class="font-medium text-gray-700">서비스</td><td>정기적 소독, 대기환경 개선</td></tr>
-      </table>
+    <!-- 카드 9: 라운지 -->
+    <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer">
+      <img src="/images/TC9.png" alt="라운지" class="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-110" />
+      <div class="absolute inset-0 bg-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-center">
+        <h3 class="text-green-700 font-bold mb-2 text-lg">📌 라운지</h3>
+        <p class="text-sm text-gray-800 mb-1"><strong>대상:</strong> 공유 라운지, 로비</p>
+        <p class="text-sm text-gray-800 mb-1"><strong>필요:</strong> 다중 이용 공간 위생</p>
+        <p class="text-sm text-gray-800 mb-1"><strong>서비스:</strong> 공기질 정화, 소독</p>
+        <p class="text-sm text-gray-700"><strong>특징:</strong> 공기 측정 결과 및 비교 리포트 제공</p>
+      </div>
     </div>
 
-    <!-- 카드: 창고 -->
-    <div onclick="toggleDetails('card10')" class="group cursor-pointer rounded-xl overflow-hidden shadow-lg">
-      <img src="/images/TC10.png" alt="창고" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" />
-      <div class="p-3 font-semibold text-gray-800">창고</div>
-    </div>
-    <div id="card10-details" class="hidden bg-white border border-gray-200 rounded-xl p-4 text-sm">
-      <h3 class="text-green-700 font-bold mb-2">📌 요약 설명</h3>
-      <table class="w-full table-auto text-left">
-        <tr><td class="font-medium text-gray-700">대상</td><td>물류창고</td></tr>
-        <tr><td class="font-medium text-gray-700">필요</td><td>쥐, 바퀴, 해충 방제</td></tr>
-        <tr><td class="font-medium text-gray-700">서비스</td><td>통합방제, 입구 차단 소독</td></tr>
-      </table>
+    <!-- 카드 10: 창고 -->
+    <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer">
+      <img src="/images/TC10.png" alt="창고" class="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-110" />
+      <div class="absolute inset-0 bg-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-center">
+        <h3 class="text-green-700 font-bold mb-2 text-lg">📌 창고</h3>
+        <p class="text-sm text-gray-800 mb-1"><strong>대상:</strong> 물류창고, 저장시설</p>
+        <p class="text-sm text-gray-800 mb-1"><strong>필요:</strong> 해충방제, 바닥 위생</p>
+        <p class="text-sm text-gray-800 mb-1"><strong>서비스:</strong> 통합방제(IPM), 소독</p>
+        <p class="text-sm text-gray-700"><strong>특징:</strong> 실시간 방제 이력 관리 및 통계 리포트 제공</p>
+      </div>
     </div>
 
   </div>
